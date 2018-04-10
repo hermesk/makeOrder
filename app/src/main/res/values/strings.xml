@@ -1,6 +1,21 @@
 <resources>
     <string name="app_name">Make Order</string>
     <string name="quantity">quantity</string>
+    <string name="topping">Topping</string>
+    <string name="whippedCream">Whipped Cream</string>
     <string name="order">Order</string>
     <string name="price">price</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="minCups">You cannot Order less than One Cup of Coffee</string>
+    <string name="maxCups">You cannot Order more than 100 Cups of Coffee</string>
+    <string name="addChocolate">Add chocolate? </string>
+    <string name="addWhippedCream">Add WhippedCream? </string>
+    <string name="name">Name</string>
+    <string name="cups">cups of coffee</string>
+    <string name="thank">Thank You</string>
+    <string name="total">Total KSh</string>
+    <string name="mailorder">Coffee Order for </string>
+
+
+
 </resources>
