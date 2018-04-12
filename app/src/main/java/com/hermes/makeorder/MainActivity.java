@@ -31,17 +31,17 @@ public class MainActivity extends AppCompatActivity {
 
         // Figure out if the user wants whipped cream topping
         CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.whippedcream_checkbox);
-        boolean haswhippedCream = whippedCreamCheckBox.isChecked();
+        boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
         // Figure out if the user wants chocolate topping
         CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate_checkbox);
         boolean hasChocolate = chocolateCheckBox.isChecked();
         //calculate the price
-        int price = calculatePrice(haswhippedCream, hasChocolate);
+        int price = calculatePrice(hasWhippedCream, hasChocolate);
         // get name from name field
         EditText nameField = findViewById(R.id.name_field);
         String name = nameField.getText().toString();
 
-        String priceMessage = createOrderSummary(name, price, haswhippedCream, hasChocolate);
+        String priceMessage = createOrderSummary(name, price, hasWhippedCream, hasChocolate);
 
         //send order summary to email
         Intent intent = new Intent(Intent.ACTION_SENDTO);
@@ -112,19 +112,12 @@ public class MainActivity extends AppCompatActivity {
 
     private String createOrderSummary(String name, int price, boolean addWhippedCream, boolean addChocolate) {
         String priceMessage = getString(R.string.name) + name;
-        priceMessage += "\n"+ getString(R.string.addWhippedCream) + addWhippedCream;
-        priceMessage += "\n"+ getString(R.string.addChocolate) + addChocolate;
-        priceMessage += "\n"+getString(R.string.quantity) + quantity + getString(R.string.cups);
-        priceMessage += "\n"+getString(R.string.thank) + price;
-        priceMessage += "\n"+getString(R.string.thank);
+        priceMessage += "\n "+ getString(R.string.addWhippedCream) + addWhippedCream;
+        priceMessage += "\n "+ getString(R.string.addChocolate) + addChocolate;
+        priceMessage += "\n "+getString(R.string.quantity) + quantity + getString(R.string.cups);
+        priceMessage += "\n "+getString(R.string.thank) + price;
+        priceMessage += "\n "+getString(R.string.thank);
         return priceMessage;
     }
 
-//    /**
-//     * This method displays the given text on the screen.
-//     */
-//    private void displayMessage(String message) {
-//        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary__text_view);
-//        orderSummaryTextView.setText(message);
-//    }
 }
